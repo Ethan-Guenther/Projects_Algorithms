@@ -14,6 +14,3 @@ const PORT = 8000;
 
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`))
 
-const cost = 3.99;
-const date = 'today';
-const skill = 'hi';

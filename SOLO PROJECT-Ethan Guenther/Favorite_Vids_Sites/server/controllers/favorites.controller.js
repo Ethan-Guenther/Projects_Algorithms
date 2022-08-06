@@ -46,7 +46,9 @@ module.exports.deleteFavorite = (req,res) => {
 },
 
 module.exports.updateFavoriteById = (req, res) => {
-    Favorites.findByIdAndUpdate({_id: req.params.id})
+    Favorites.findByIdAndUpdate({_id: req.params.id}, req.body, {
+        new:true, runValidators: true,
+    })
     .then((updateFav) => {
         res.json(updateFav)
     })
