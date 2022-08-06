@@ -1,0 +1,3 @@
+Solo project idea: VIDEO PROJECT: You love sharing your videos with all your friends but you keep forgetting those videos existed. Create a webpage and store each video url onto that webpage as a reference tag that you can click to go and watch each and every video. Description for each video will be placed next to it. You will never have to remember each and every video, just find the url and save it to send it to your friends later. 
+
+Also Works for favorite websites or websites you find interesting and want to check out later.
