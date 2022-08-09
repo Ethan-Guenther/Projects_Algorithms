@@ -50,6 +50,7 @@ module.exports.updateFavoriteById = (req, res) => {
         new:true, runValidators: true,
     })
     .then((updateFav) => {
+        console.log(updateFav)
         res.json(updateFav)
     })
     .catch((err) => {
