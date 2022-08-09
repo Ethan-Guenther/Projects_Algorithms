@@ -1,7 +1,7 @@
 import {useEffect, useState } from 'react';
 import axios from 'axios';
 import {Link, useNavigate} from 'react-router-dom';
-
+import "../App.css"
 const DisplayAll = () => {
 
     const [favoritesList, setFavoritesList] = useState([]);
@@ -24,8 +24,11 @@ const DisplayAll = () => {
 
   return (
     <div>
-        <h1>Favorite URL</h1>
-
+        <div>
+            <h1>Favorite URL's</h1>
+            <button onClick={ () => navigate('/new/create')}>Add Favorite URL</button>
+        </div>
+        
         <h2>Table of contents</h2>
         <table>
             <thead>
