@@ -19,7 +19,7 @@ const FavoriteById = () => {
         .catch((err) => {
             console.log("Error grabbing URL by ID", err)
         })
-    }, []);
+    }, [id]);
 
     const handleDelete = () => {
         axios.delete(`http://localhost:8000/api/favorites/${id}`)
