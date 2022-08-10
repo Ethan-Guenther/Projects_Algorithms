@@ -36,6 +36,7 @@ const EditFavorite = () => {
         })
         .catch((err) => {
             console.log(err)
+            console.log(err.data)
             setErrors(err.response.data.error.errors)
         });
     }
