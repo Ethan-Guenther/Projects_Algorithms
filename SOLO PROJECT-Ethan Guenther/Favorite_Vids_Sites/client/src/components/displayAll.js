@@ -1,7 +1,6 @@
 import {useEffect, useState } from 'react';
 import axios from 'axios';
 import {useNavigate} from 'react-router-dom';
-import "../App.css"
 const DisplayAll = () => {
 
     const [favoritesList, setFavoritesList] = useState([]);
@@ -23,13 +22,17 @@ const DisplayAll = () => {
 
 
   return (
-    <div>
-        <div>
-            <h1>Favorite URL's</h1>
-            <button onClick={ () => navigate('/new/create')}>Add Favorite URL</button>
-        </div>
+    <div className='html-container'>
+        <div className='header'>
+            <div>
+                <h1>Favorite URL's</h1>
+                <button className='button-create' onClick={ () => navigate('/new/create')}><span>Add Url</span></button>
+            </div>
 
-        <h2>Table of contents</h2>
+        </div>
+        <div className='sub-header'>
+            <h2>Table of contents</h2>
+        </div>
         <table>
             <thead>
                 <tr>
@@ -44,8 +47,8 @@ const DisplayAll = () => {
                             <tr key={favorite._id}>
                                 <td onClick={() => window.open(`${favorite.url}`, "_blank")}>{favorite.url}</td>
                                 <td>
-                                     <button onClick={() => navigate(`${favorite._id}/description`)}>Details</button>
-                                    <button onClick={() => navigate(`edit/${favorite._id}`)}>Edit</button>
+                                     <button className= 'space-button' onClick={() => navigate(`${favorite._id}/description`)}>Details</button>
+                                    <button className='space-button' onClick={() => navigate(`edit/${favorite._id}`)}>Edit</button>
                                 </td>
                             </tr>
                         )

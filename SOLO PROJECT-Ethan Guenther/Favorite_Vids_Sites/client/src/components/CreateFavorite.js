@@ -49,7 +49,7 @@ const CreateFavorite = () => {
                 errors.description ?
                 <p>{errors.description.message}</p> : null
             }
-            <button type='submit'>Submit</button>
+            <button className='button-72' type='submit'>Submit</button>
             <button><Link to={'/'}>Cancel</Link></button>
 
         </form>
