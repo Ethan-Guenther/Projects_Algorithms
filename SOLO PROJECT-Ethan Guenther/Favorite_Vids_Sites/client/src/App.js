@@ -6,7 +6,7 @@ import EditFavorite from './components/EditFavorite';
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 function App() {
   return (
-    <div className="App">
+    <div className="html-container">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<DisplayAll/>}/>

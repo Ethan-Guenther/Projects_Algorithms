@@ -22,7 +22,7 @@ const DisplayAll = () => {
 
 
   return (
-    <div className='html-container'>
+    <div>
         <div className='header'>
             <div>
                 <h1>Favorite URL's</h1>
@@ -45,10 +45,10 @@ const DisplayAll = () => {
                     favoritesList.map((favorite, index) => {
                         return(
                             <tr key={favorite._id}>
-                                <td onClick={() => window.open(`${favorite.url}`, "_blank")}>{favorite.url}</td>
+                                <td onClick={() => window.open(`${favorite.url}`, "_blank")}><span>{favorite.url}</span></td>
                                 <td>
-                                     <button className= 'space-button' onClick={() => navigate(`${favorite._id}/description`)}>Details</button>
-                                    <button className='space-button' onClick={() => navigate(`edit/${favorite._id}`)}>Edit</button>
+                                        <button className= 'space-button' onClick={() => navigate(`${favorite._id}/description`)}>Details</button>
+                                        <button className='space-button' onClick={() => navigate(`edit/${favorite._id}`)}>Edit</button>
                                 </td>
                             </tr>
                         )

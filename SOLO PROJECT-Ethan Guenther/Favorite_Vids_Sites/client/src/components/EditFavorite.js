@@ -42,8 +42,8 @@ const EditFavorite = () => {
     }
   return (
     <div>
-        EditFavorite
-        <form onSubmit={onSubmitHandler}>
+        <form className='create-edit-form' onSubmit={onSubmitHandler}>
+            <h1>Edit Favorite</h1>
             <label>URL:</label>
             <input type={'text'}
             name={"url"}
@@ -54,16 +54,19 @@ const EditFavorite = () => {
                 <p>{errors.url.message}</p> : null
             }
             <label>Description:</label>
-            <input type={'text'}
-            name='description'
-            value={description} onChange = {(e) => setDescription(e.target.value)}/>
+            <textarea type={'text'} name='description'
+            value={description} 
+            onChange = {(e) => setDescription(e.target.value)}
+            cols={45} rows={6}></textarea>
             {/* Display Errors for Desription Validation */}
             {
                 errors.description ?
                 <p>{errors.description.message}</p> : null
             }
-            <button type='submit'>Submit</button>
-            <button><Link to={'/'}>Cancel</Link></button>
+            <div>
+                <button type='submit'>Submit</button>
+                <Link to={'/'}><button>Cancel</button></Link>
+            </div>
 
         </form>
     </div>

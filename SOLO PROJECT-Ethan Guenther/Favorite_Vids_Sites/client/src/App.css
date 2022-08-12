@@ -1,17 +1,14 @@
 * {
-  padding:0;
-  margin: 0;
+  padding:0px;
+  margin: 0px;
 }
 .html-container {
-  width: auto;
+  background-image: linear-gradient(rgb(36, 169, 209), limegreen ,orange, purple);
   height: auto;
-  margin-left: 100px;
-  margin-right: 100px;
-  background-color: limegreen;
+  min-height: 54em;
+  padding-top: 30px;
 }
-.body {
-  background-image: -moz-linear-gradient(tan, limegreen ,orange, purple);
-}
+
 .header {
   
   text-align: center;
@@ -22,6 +19,8 @@
   display: flex;
   justify-content: center;
   margin: auto;
+  border-radius: 50%;
+  border: solid black;
   
 }
 
@@ -29,7 +28,6 @@
   margin: auto;
   width: fit-content;
   height: fit-content;
-  background-color: white;
 }
 
 table {
@@ -42,14 +40,25 @@ table {
   table-layout: fixed;
   width: 1500px;
   text-align: center;
+  background-image: linear-gradient(90deg, rgb(240, 197, 78)5%,white,  white 75%, rgb(59, 224, 253));
+
 
 }
 table td {
   word-wrap: break-word;
+  background-image: linear-gradient(90deg, rgb(240, 197, 78)5%,white,  white 75%, rgb(59, 224, 253));
+  padding: 10px 30px;
+}
+table td button, span {
+  cursor:pointer;
 }
 .space-button {
   margin: 20px;
   padding: 10px;
+  box-shadow: 5px 5px 5px 0px black;
+  background-image: linear-gradient(45deg,black 1%,  rgb(190, 190, 190) 80%, black);
+  cursor: pointer;
+  color: white;
 }
 
 /* CSS button style grabbed from https://getcssscan.com/css-buttons-examples */
@@ -96,4 +105,68 @@ table td {
     font-size: 24px;
     min-width: 196px;
   }
+}
+
+.create-edit-form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+.create-edit-form button {
+  margin: 30px;
+  height: 2em;
+  width: 5em;
+  border: 0;
+  box-shadow: 5px 5px 5px 0px black;
+  background-image: linear-gradient(45deg,black 1%,  rgb(190, 190, 190) 80%, black);
+  cursor: pointer;
+  color: white;
+}
+.create-edit-form input{
+    width: 50em;
+    margin: 10px;
+}
+
+.create-edit-form label {
+  font-weight: bold;
+  font-size: large;
+  padding: 10px;
+}
+
+.description-page {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+.description-page p {
+  height: auto;
+  width: 50%;
+  padding: 35px;
+  margin: 20px;
+  background-image: linear-gradient(90deg, rgb(240, 197, 78)5%,white,  white 75%, rgb(59, 224, 253));
+  border-radius: 50px;
+  word-wrap: break-word;
+  margin-left: 25%;
+  font-size: larger;
+  font-weight: 475;
+}
+.description-page span{
+  cursor: pointer;
+  text-decoration: underline;
+}
+.description-page button {
+  width: 10em;
+  height: 3em;
+  border: 0;
+  box-shadow: 5px 5px 5px black;
+  background-image: linear-gradient(45deg, red 20%,black,  rgb(190, 190, 190) 80%, red);
+  cursor: pointer;
+  color: white;
+}
+.description-page h2 {
+  margin-top: 15px;
 }

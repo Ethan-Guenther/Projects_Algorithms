@@ -33,13 +33,13 @@ const FavoriteById = () => {
         })
     }
   return (
-    <>
+    <div className='description-page'>
         <div>
             <Link to={"/"}>Back To Home</Link>
         </div>
         <div>
             <h2>URL:</h2>
-            <p onClick={() => window.open(`${favById.url}`, "_blank")}>{favById.url}</p>
+            <p onClick={() => window.open(`${favById.url}`, "_blank")}><span>{favById.url}</span></p>
         </div>
         <div>
             <h2>Description:</h2>
@@ -49,7 +49,7 @@ const FavoriteById = () => {
             <button onClick={handleDelete}>Delete</button>
 
         </div>
-    </>
+    </div>
 
 
   )
