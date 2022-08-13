@@ -33,14 +33,32 @@ class List { // The Singly Linked List class itself
         }
         return Head.val;
     }
+
+    removeFront() {
+        if(this.head === null)
+        {
+            return this.head;
+        }
+        let removeFrontNode = this.head;
+        this.head = removeFrontNode.next;
+        removeFrontNode = null;
+        return this.head;
+    }
 }
 
 var myList = new List();
 
-// myList.addFront(10);
-// myList.addFront(60);
-// myList.addFront(27);
+myList.addFront(10);
+myList.addFront(60);
+myList.addFront(27);
+myList.addFront(36);
+myList.addFront(82);
+console.log(myList);
+myList.removeFront();
+
+myList.removeFront();
 console.log(myList);
 
 console.log("Front Value: ",myList.front());
+
 
